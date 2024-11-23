@@ -46,7 +46,7 @@ headers = {
 
 # Gửi yêu cầu tới Binance API
 try:
-    response = requests.get("https://api.binance.com/api/v3/exchangeInfo", headers=headers)
+    response = requests.get("https://api.binance.com/api/v3/klines", headers=headers)
     if response.status_code == 200:
         data = response.json()
         st.write(data)  # Hiển thị dữ liệu nhận được từ API
